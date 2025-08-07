@@ -26,6 +26,18 @@ SYS,SYS,SYS,SYS,SYS,SYS,SYS,SYS,SYS,SYS
 1 row selected.
 ```
 
+```console
+SQL> SELECT deptno,
+2       listagg_clob_with_sep(ename, ' - ') AS employees
+3 FROM   emp
+4 GROUP  BY deptno;
+
+employees
+------------------------------------------------
+SYS-SYS-SYS-SYS-SYS-SYS-SYS-SYS-SYS-SYS
+
+1 row selected.
+```
 ## Usual stuff
 
 This software comes WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
